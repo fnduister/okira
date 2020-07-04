@@ -39,4 +39,4 @@ jobs:
     - name: iOS
       run: |
         nuget restore
-        msbuild okiraPrism.iOS/okiraPrism.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
+        msbuild okiraPrism/okiraPrism.iOS/okiraPrism.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
