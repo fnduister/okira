@@ -6,9 +6,13 @@ jobs:
   Test:
     runs-on: macos-latest
     steps:
+    - uses: actions/checkout@v1
     - name: Show what's in the directory
       run: |
         ls
+    - name: Show what's in the directory
+      run: |
+        dotnet test okiraPrism.sln --configuration Release
         
   Android:
     runs-on: macos-latest
