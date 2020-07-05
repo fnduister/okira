@@ -12,7 +12,7 @@ jobs:
         ls
     - name: Show what's in the directory
       run: |
-        dotnet test okiraPrims.sln --no-restore --verbosity Release        
+        dotnet test okiraPrims.sln --no-restore --verbosity normal --configuration Release        
   Android:
     runs-on: macos-latest
     steps:
