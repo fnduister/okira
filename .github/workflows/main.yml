@@ -12,7 +12,8 @@ jobs:
         ls
     - name: Show what's in the directory
       run: |
-        dotnet test okiraPrism.sln --verbosity normal     
+        nuget restore
+        dotnet test okiraPrism.sln --no-restore --verbosity normal     
   Android:
     runs-on: macos-latest
     steps:
