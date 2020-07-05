@@ -3,24 +3,17 @@ name: CI on Push and Pull Request
 on: [push, pull_request]
 
 jobs:
-  Practice:
+  Test:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
     - name: Show what's in the directory
       run: |
         ls
-    - name: Show what all is in the parent directory
+    - name: Show what's in the directory
       run: |
-        cd ..
-        ls
-        
+        nuget restore
+        dotnet test okiraPrism.sln --no-restore --verbosity normal     
   Android:
     runs-on: macos-latest
     steps:
