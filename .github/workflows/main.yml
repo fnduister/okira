@@ -8,6 +8,7 @@ jobs:
     steps:
     - name: Show what's in the directory
       run: |
+        ls
         dotnet test okiraPrism.sln --configuration Release
         
   Android:
