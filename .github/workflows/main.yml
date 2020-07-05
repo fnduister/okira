@@ -9,6 +9,7 @@ jobs:
     - name: Show what's in the directory
       run: |
         ls
+        nuget restore
         dotnet test okiraPrism.sln --configuration Release
         
   Android:
