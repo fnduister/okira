@@ -6,6 +6,9 @@ using Xamarin.Essentials.Interfaces;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace okiraPrism
@@ -24,6 +27,9 @@ namespace okiraPrism
         protected override async void OnInitialized()
         {
             InitializeComponent();
+
+            AppCenter.Start("android=51e5e8d3-0489-435f-b045-167e1ab34efb;",
+                typeof(Analytics), typeof(Crashes));
 
             await NavigationService.NavigateAsync("NavigationPage/MainPage");
         }
