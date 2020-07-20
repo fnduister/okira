@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Helpers\**" />
+    <EmbeddedResource Remove="Helpers\**" />
+    <None Remove="Helpers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.3.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.3.0" />
     <PackageReference Include="Moq" Version="4.14.5" />
