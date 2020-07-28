@@ -2,9 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="okiraPrism.Views.MainPage"
+             xmlns:resources="clr-namespace:okiraPrism.Resx"
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="{x:Static resources:AppResources.Welcome_message}"/>
         <Label Text="Welcome to Xamarin Forms and Prism!" x:Name="label"/>
         <Slider x:Name="slider" ValueChanged="Slider_OnValueChanged"/>
     </StackLayout>
