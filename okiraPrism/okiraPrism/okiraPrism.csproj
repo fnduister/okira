@@ -5,19 +5,38 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Helpers\**" />
-    <EmbeddedResource Remove="Helpers\**" />
-    <None Remove="Helpers\**" />
+    <None Remove="Images\background1.png" />
+    <None Remove="Images\drawable-hdpi\3.-Interior-portrait-Stalybridge-Station-Buffet-by-Michael-Slaughter-LRPS.png" />
+    <None Remove="Images\drawable-xhdpi\3.-Interior-portrait-Stalybridge-Station-Buffet-by-Michael-Slaughter-LRPS.png" />
+    <None Remove="Images\drawable-xhdpi\background1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Images\background1.png" />
+    <EmbeddedResource Include="Images\drawable-xhdpi\background1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\drawable-hdpi\3.-Interior-portrait-Stalybridge-Station-Buffet-by-Michael-Slaughter-LRPS.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.3.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.3.0" />
     <PackageReference Include="Moq" Version="4.14.5" />
-    <PackageReference Include="Plugin.Multilingual" Version="1.0.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1080" />
+    <PackageReference Include="Syncfusion.Licensing" Version="18.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="18.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.Cards" Version="18.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="18.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="18.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="18.2.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="18.2.0.46" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1179" />
     <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.5.3.2" />
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.1179" />
   </ItemGroup>
 
   <ItemGroup>
@@ -41,13 +60,33 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Themes\LightTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Translations\Fr.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Catalog\ArticleCardPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Catalog\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\Page1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\ArticleActivityTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Templates\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Behaviors\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

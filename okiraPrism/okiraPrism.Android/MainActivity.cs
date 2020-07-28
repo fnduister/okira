@@ -14,10 +14,14 @@ namespace okiraPrism.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk0MzM1QDMxMzgyZTMyMmUzMFpxdlRGMkx2UXhYZ01HMFF3SzhNUU16dVdKT3B5S0ZDUTY2OUxJQ3Q2K0E9;Mjk0MzM2QDMxMzgyZTMyMmUzMFZSYkJNTE1BL0w4ZFBvbWQ4OVBseUJ2L080UWo1dVRIMDF1NC9YK08vcnM9");
+
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
             LoadApplication(new App(new AndroidInitializer()));
         }
 

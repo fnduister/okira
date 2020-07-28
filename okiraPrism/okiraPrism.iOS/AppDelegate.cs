@@ -1,4 +1,10 @@
-﻿using Foundation;
+using Syncfusion.XForms.iOS.Cards;
+using Syncfusion.XForms.iOS.Border;
+using Syncfusion.SfRating.XForms.iOS;
+using Syncfusion.XForms.iOS.Core;
+using Syncfusion.ListView.XForms.iOS;
+using Syncfusion.XForms.iOS.Buttons;
+using Foundation;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -21,7 +27,17 @@ namespace okiraPrism.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            //Register Syncfusion license
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("Mjk0MzM1QDMxMzgyZTMyMmUzMFpxdlRGMkx2UXhYZ01HMFF3SzhNUU16dVdKT3B5S0ZDUTY2OUxJQ3Q2K0E9;Mjk0MzM2QDMxMzgyZTMyMmUzMFZSYkJNTE1BL0w4ZFBvbWQ4OVBseUJ2L080UWo1dVRIMDF1NC9YK08vcnM9");
+
             global::Xamarin.Forms.Forms.Init();
+            SfCardViewRenderer.Init();
+            SfRatingRenderer.Init();
+            SfBorderRenderer.Init();
+            Core.Init();
+            SfListViewRenderer.Init();
+            SfButtonRenderer.Init();
+            Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App(new iOSInitializer()));
 
             return base.FinishedLaunching(app, options);

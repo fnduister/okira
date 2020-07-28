@@ -9,6 +9,7 @@
         <Label Text="{x:Static resources:AppResources.Welcome_message}"/>
         <Label Text="Welcome to Xamarin Forms and Prism!" x:Name="label"/>
         <Slider x:Name="slider" ValueChanged="Slider_OnValueChanged"/>
+        <Button Command="{Binding NavigateCommand}" Text="Next Page"/>
     </StackLayout>
 
 </ContentPage>
