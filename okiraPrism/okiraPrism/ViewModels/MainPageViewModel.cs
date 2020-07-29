@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using okiraPrism.Resx;
 
 namespace okiraPrism.ViewModels
 {
@@ -13,7 +14,7 @@ namespace okiraPrism.ViewModels
         public MainPageViewModel(INavigationService navigationService)
             : base(navigationService)
         {
-            Title = "Main Page";
+            Title = AppResources.MainPage_Title;
         }
     }
 }
