@@ -1,4 +1,6 @@
-﻿using OkiraAPI.Tools;
+﻿using OkiraAPI.DAL;
+using OkiraAPI.Tools;
+using OkiraEntity.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,14 +11,21 @@ using System.Web.Http;
 namespace OkiraAPI.Controllers
 {
     [RoutePrefix("api")]
-    public class LoginController : ApiController
+    public class LoginController : BaseController
     {
         [Route("login/{username}")]
         [AllowAuthenticatedUsers(Username = "username")]
-        public IHttpActionResult Login(string username)
+        public IHttpActionResult Login(string username, string password)
         {
-            //En attente 
-            return Ok();
+            try
+            {
+                User user = UserDataAcces.Login(username, password);
+                return Ok(user);
+            }
+            catch (Exception ex)
+            {
+                return ActionResultWithError(ex);
+            }
         }
     }
 }
