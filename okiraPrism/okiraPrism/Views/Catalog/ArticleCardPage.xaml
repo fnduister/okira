@@ -1,25 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
-             xmlns:viewModel="clr-namespace:okiraPrism.ViewModels.Catalog"
-             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
-             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
-             xmlns:controls="clr-namespace:okiraPrism.Controls"
-             xmlns:local="clr-namespace:okiraPrism.MarkupExtensions;assembly=okiraPrism"
-             xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
-             xmlns:core="clr-namespace:Syncfusion.XForms.Core;assembly=Syncfusion.Core.XForms"
-             xmlns:Templates="clr-namespace:okiraPrism.Views.Templates"
-             xmlns:helpers="clr-namespace:okiraPrism.Helpers;assembly=okiraPrism"
-             x:Name="articleCard"
-             BackgroundImageSource="{local:EmbeddedImage ResourceId=okiraPrism.Images.background1.png}"
-             NavigationPage.HasNavigationBar="False"
-             x:Class="okiraPrism.Views.Catalog.ArticleCardPage">
+<ContentPage
+    x:Class="okiraPrism.Views.Catalog.ArticleCardPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:Templates="clr-namespace:okiraPrism.Views.Templates"
+    xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+    xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+    xmlns:controls="clr-namespace:okiraPrism.Controls"
+    xmlns:core="clr-namespace:Syncfusion.XForms.Core;assembly=Syncfusion.Core.XForms"
+    xmlns:helpers="clr-namespace:okiraPrism.Helpers;assembly=okiraPrism"
+    xmlns:listView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:local="clr-namespace:okiraPrism.MarkupExtensions;assembly=okiraPrism"
+    xmlns:resources="clr-namespace:okiraPrism.Resx"
+    xmlns:viewModel="clr-namespace:okiraPrism.ViewModels.Catalog"
+    x:Name="articleCard"
+    BackgroundImageSource="{local:EmbeddedImage ResourceId=okiraPrism.Images.background1.png}"
+    NavigationPage.HasNavigationBar="False">
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Styles.xaml"/>
+                <ResourceDictionary Source="Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -31,89 +33,206 @@
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>  
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
             </Grid.RowDefinitions>
 
-            <BoxView Grid.Row="1" HeightRequest="1"/>
+            <BoxView Grid.Row="1" HeightRequest="1" />
 
-                <StackLayout Grid.Row="2" Spacing="0">
+            <StackLayout Grid.Row="2" Spacing="0">
                 <ScrollView>
-                    <controls:SearchableArticleList x:Name="ArticlesCard" IsScrollBarVisible="False"  AllowSwiping="True" 
-                                  AutoFitMode="Height" SelectionGesture="Tap"  SelectionMode="Single" ItemSpacing="16" 
-                                  VerticalOptions="FillAndExpand" SearchText="{Binding SearchText}" TapCommand="{Binding ItemTappedCommand}"
-                                  ItemsSource="{Binding Articles}"  SelectionBackgroundColor="Transparent">
+                    <controls:SearchableArticleList
+                        x:Name="ArticlesCard"
+                        AllowSwiping="True"
+                        AutoFitMode="Height"
+                        IsScrollBarVisible="False"
+                        ItemSpacing="16"
+                        ItemsSource="{Binding Articles}"
+                        SearchText="{Binding SearchText}"
+                        SelectionBackgroundColor="Transparent"
+                        SelectionGesture="Tap"
+                        SelectionMode="Single"
+                        TapCommand="{Binding ItemTappedCommand}"
+                        VerticalOptions="FillAndExpand">
                         <controls:SearchableArticleList.ItemTemplate>
                             <DataTemplate>
                                 <ViewCell>
-                                    <controls:CustomShadowFrame CornerRadius="4" HasShadow="True" BorderColor="{DynamicResource Gray-Black}"  BackgroundColor="{DynamicResource Light-Black}"
-                                                                Margin="4" Padding="0" BorderWidth="1">
-                                        <controls:CustomShadowFrame.Content>                                        
-                                            <Grid RowSpacing="0" ColumnSpacing="0">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"/>
-                                                <RowDefinition Height="Auto"/>
-                                            </Grid.RowDefinitions>
+                                    <controls:CustomShadowFrame
+                                        Margin="2"
+                                        Padding="0"
+                                        BackgroundColor="{DynamicResource Light-Black}"
+                                        BorderColor="{DynamicResource Gray-Black}"
+                                        BorderWidth="1"
+                                        CornerRadius="4"
+                                        HasShadow="True"
+                                        Opacity="1">
+                                        <controls:CustomShadowFrame.Content>
+                                            <Grid ColumnSpacing="0" RowSpacing="0">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*" />
+                                                    <RowDefinition Height="Auto" />
+                                                </Grid.RowDefinitions>
 
                                                 <!--  OverLay Effect  -->
-                                                <Frame  CornerRadius="4" Opacity="0.35" BackgroundColor="{DynamicResource Gray-White}" Grid.Row="0"/>
+                                                <Frame Grid.Row="0" BackgroundColor="{DynamicResource Light-White}" />
 
-                                                <!-- Description of the Article  -->
-                                            <StackLayout Grid.Row="0" Margin="16,70,16,0" Spacing="0" VerticalOptions="EndAndExpand">
-                                                
-                                                <!--Article Title-->
-                                                <Label Text="{Binding Name}"  Margin="0,8" FontSize="16" 
-                                                FontFamily="{StaticResource Montserrat-SemiBold}" LineBreakMode="WordWrap"
-                                                TextColor="{DynamicResource Gray-Black}" VerticalOptions="End"  LineHeight="{OnPlatform Default=-1,Android=1.5}"/>
-
-                                                <!--  Author name  -->
-                                                <Label 
-                                                FontFamily="{StaticResource Montserrat-Medium}"
-                                                FontSize="12"
-                                                LineHeight="{OnPlatform Default=-1,
-                                                                        Android=1.5}"
-                                                Text="{Binding Author}"
-                                                TextColor="{DynamicResource Gray-Black }"
-                                                VerticalOptions="End" />
-
-                                                <!--  Published date and average reading time  -->
-                                                <Label 
-                                                Margin="0,0,0,8" Grid.Row="2" VerticalOptions="End"
-                                                FontFamily="{StaticResource Montserrat-Medium}"
-                                                FontSize="12"
-                                                LineHeight="{OnPlatform Default=-1,
-                                                                        Android=1.5}"
-                                                TextColor="{DynamicResource Gray-Black }">
-                                                    <Label.FormattedText>
-                                                        <FormattedString>
-                                                            <Span Text="{Binding Date}" />
-                                                            <Span Text=" | " />
-                                                            <Span Text="{Binding AverageReadingTime}" />
-                                                        </FormattedString>
-                                                    </Label.FormattedText>
-                                                </Label>
-                                            </StackLayout>
-                                                <StackLayout 
-                                                    Grid.Row="1" 
-                                                    Spacing="0" 
-                                                    HorizontalOptions="FillAndExpand"
+                                                <!--  Description of the Article  -->
+                                                <StackLayout
+                                                    Grid.Row="0"
+                                                    Margin="16,70,16,0"
+                                                    Spacing="0"
                                                     VerticalOptions="EndAndExpand">
-                                                    <ImageButton
-                                                        Margin="10"
+
+                                                    <Grid RowSpacing="0">
+                                                        <Grid.RowDefinitions>
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                            <RowDefinition Height="Auto" />
+                                                        </Grid.RowDefinitions>
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition />
+                                                            <ColumnDefinition />
+                                                        </Grid.ColumnDefinitions>
+                                                        <StackLayout Grid.Row="0">
+                                                            <Label Text="BAR OKALA" />
+                                                            <Label />
+                                                        </StackLayout>
+                                                        <StackLayout
+                                                            Grid.Row="1"
+                                                            Grid.Column="0"
+                                                            HorizontalOptions="StartAndExpand">
+                                                            <Label Text="Recette" />
+                                                            <Label />
+                                                        </StackLayout>
+                                                        <StackLayout
+                                                            Grid.Row="1"
+                                                            Grid.Column="1"
+                                                            HorizontalOptions="EndAndExpand">
+                                                            <Label Text="150000F" />
+                                                            <Label />
+                                                        </StackLayout>
+
+                                                        <StackLayout
+                                                            Grid.Row="2"
+                                                            Grid.Column="0"
+                                                            HorizontalOptions="StartAndExpand">
+                                                            <Label Text="Stock de la veille" />
+                                                        </StackLayout>
+                                                        <StackLayout
+                                                            Grid.Row="2"
+                                                            Grid.Column="1"
+                                                            HorizontalOptions="EndAndExpand">
+                                                            <Label Text="2000000F" />
+                                                        </StackLayout>
+
+                                                        <StackLayout
+                                                            Grid.Row="3"
+                                                            Grid.Column="0"
+                                                            HorizontalOptions="StartAndExpand">
+                                                            <Label Text="Stock du jour" />
+                                                        </StackLayout>
+                                                        <StackLayout
+                                                            Grid.Row="3"
+                                                            Grid.Column="1"
+                                                            HorizontalOptions="EndAndExpand">
+                                                            <Label Text="2000000F" />
+                                                        </StackLayout>
+
+                                                        <StackLayout
+                                                            Grid.Row="4"
+                                                            Grid.Column="0"
+                                                            HorizontalOptions="StartAndExpand">
+                                                            <Label Text="Stock du jour" />
+                                                        </StackLayout>
+                                                        <StackLayout
+                                                            Grid.Row="4"
+                                                            Grid.Column="1"
+                                                            HorizontalOptions="EndAndExpand">
+                                                            <Label Text="2000000F" />
+                                                        </StackLayout>
+
+                                                        <StackLayout
+                                                            Grid.Row="5"
+                                                            Grid.Column="0"
+                                                            HorizontalOptions="StartAndExpand">
+                                                            <Label Text="Stock du jour" />
+                                                        </StackLayout>
+                                                        <StackLayout
+                                                            Grid.Row="5"
+                                                            Grid.Column="1"
+                                                            HorizontalOptions="EndAndExpand">
+                                                            <Label Text="2000000F" />
+                                                        </StackLayout>
+                                                    </Grid>
+                                                </StackLayout>
+                                                <StackLayout
+                                                    Grid.Row="1"
+                                                    HorizontalOptions="FillAndExpand"
+                                                    Orientation="Horizontal"
+                                                    Spacing="0"
+                                                    VerticalOptions="EndAndExpand">
+
+                                                    <Button
                                                         BackgroundColor="Transparent"
-                                                        HeightRequest="32"
-                                                        WidthRequest="32">
-                                                        <ImageButton.Source>
+                                                        ContentLayout="Top,0"
+                                                        FontSize="10"
+                                                        HorizontalOptions="Start"
+                                                        Text="{x:Static resources:AppResources.Settings_Title}"
+                                                        TextColor="{DynamicResource Secondary}">
+                                                        <Button.ImageSource>
                                                             <FontImageSource
                                                                 FontFamily="{StaticResource MaterialFontFamily}"
-                                                                Glyph="{x:Static helpers:IconFont.AccessPoint}"
-                                                                Color="{DynamicResource Gray-100}" />
-                                                        </ImageButton.Source>
-                                                    </ImageButton>
-                                                    <Label Text="Hello MoM"/>
+                                                                Glyph="{x:Static helpers:IconFont.Cog}"
+                                                                Color="{DynamicResource Secondary}" />
+                                                        </Button.ImageSource>
+                                                    </Button>
+                                                    <Button
+                                                        BackgroundColor="Transparent"
+                                                        ContentLayout="Top,0"
+                                                        FontSize="10"
+                                                        HorizontalOptions="Start"
+                                                        Text="{x:Static resources:AppResources.Inventory_Title}"
+                                                        TextColor="{DynamicResource Secondary}">
+                                                        <Button.ImageSource>
+                                                            <FontImageSource
+                                                                FontFamily="{StaticResource MaterialFontFamily}"
+                                                                Glyph="{x:Static helpers:IconFont.TextBoxOutline}"
+                                                                Color="{DynamicResource Secondary}" />
+                                                        </Button.ImageSource>
+                                                    </Button>
+                                                    <Button
+                                                        BackgroundColor="Transparent"
+                                                        ContentLayout="Top,0"
+                                                        FontSize="10"
+                                                        HorizontalOptions="Start"
+                                                        Text="{x:Static resources:AppResources.Customer_Title}"
+                                                        TextColor="{DynamicResource Secondary}">
+                                                        <Button.ImageSource>
+                                                            <FontImageSource
+                                                                FontFamily="{StaticResource MaterialFontFamily}"
+                                                                Glyph="{x:Static helpers:IconFont.Account}"
+                                                                Color="{DynamicResource Secondary}" />
+                                                        </Button.ImageSource>
+                                                    </Button>
+                                                    <Button
+                                                        BackgroundColor="Transparent"
+                                                        ContentLayout="Top,0"
+                                                        FontSize="10"
+                                                        HorizontalOptions="Start"
+                                                        Text="{x:Static resources:AppResources.Statistics_Title}"
+                                                        TextColor="{DynamicResource Secondary}">
+                                                        <Button.ImageSource>
+                                                            <FontImageSource
+                                                                FontFamily="{StaticResource MaterialFontFamily}"
+                                                                Glyph="{x:Static helpers:IconFont.ChartTimelineVariant}"
+                                                                Color="{DynamicResource Secondary}" />
+                                                        </Button.ImageSource>
+                                                    </Button>
                                                 </StackLayout>
-<!--<Templates:ArticleActivityTemplate Grid.Row="1" ParentBindingContext="{Binding Path=BindingContext, Source={x:Reference articleCard}}"/>-->
 
                                             </Grid>
                                         </controls:CustomShadowFrame.Content>
@@ -129,6 +248,21 @@
 
                     </controls:SearchableArticleList>
                 </ScrollView>
+                <Button
+                    Margin="14"
+                    BackgroundColor="{DynamicResource Light-White}"
+                    ContentLayout="Left,0"
+                    FontSize="16"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{x:Static resources:AppResources.Statistics_Title}"
+                    TextColor="Black">
+                    <Button.ImageSource>
+                        <FontImageSource
+                            FontFamily="{StaticResource MaterialFontFamily}"
+                            Glyph="{x:Static helpers:IconFont.Plus}"
+                            Color="Black" />
+                    </Button.ImageSource>
+                </Button>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

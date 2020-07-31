@@ -86,6 +86,7 @@
 
   <ItemGroup>
     <Folder Include="Behaviors\" />
+    <Folder Include="Effects\" />
     <Folder Include="NewFolder\" />
   </ItemGroup>
 

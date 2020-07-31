@@ -18,6 +18,11 @@ namespace okiraPrism.Views.Catalog
         public ArticleCardPage()
         {
             InitializeComponent();
+
+
+            NavigationPage.SetHasBackButton(this, false);
+
+
         }
     }
 }

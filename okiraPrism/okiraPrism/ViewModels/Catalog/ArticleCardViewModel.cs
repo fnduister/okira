@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using System.Collections.ObjectModel;
+using okiraPrism.Resx;
 using Syncfusion.XForms.Buttons;
 using Xamarin.Forms.Internals;
 using Model = okiraPrism.Models.Article;
@@ -58,7 +59,7 @@ namespace okiraPrism.ViewModels.Catalog
                 new Model
                 {
                     Name = "Better Brainstorming by Hand",
-                    Author = "John Doe",
+                    Author = AppResources.Inventory_Title,
                     Date = "Apr 16",
                     AverageReadingTime = "5 min read",
                     ImagePath= App.BaseImageUrl + "ArticleParallaxHeaderImage.png",

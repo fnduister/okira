@@ -11,7 +11,7 @@
     <Color x:Key="PrimaryGradient">#e83f94</Color>
     <Color x:Key="PrimaryLight">#ffe8f4</Color>
     <Color x:Key="SecondaryGradient">#7644ad</Color>
-    <Color x:Key="Secondary">#d54381</Color>
+    <Color x:Key="Secondary">#2BBEB0</Color>
     <Color x:Key="Green">#7ed321</Color>
     <Color x:Key="Red">#ff4a4a</Color>
     <Color x:Key="Orange">#ff844a</Color>
@@ -79,5 +79,10 @@
             <On Platform="UWP" Value="Assets/Montserrat-Bold.ttf#Montserrat-Bold" />
         </OnPlatform.Platforms>
     </OnPlatform>
+
+    <Style TargetType="NavigationPage">
+        <Setter Property="BarBackgroundColor" Value="#272727" />
+        <Setter Property="BarTextColor" Value="#FFFFFF" />
+    </Style>
 
 </ResourceDictionary>
