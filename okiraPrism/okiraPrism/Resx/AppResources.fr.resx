@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bar_name_Label" xml:space="preserve">
+    <value>Okira</value>
+  </data>
   <data name="Customer_Title" xml:space="preserve">
     <value>Clients</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employées</value>
   </data>
   <data name="Inventory_Title" xml:space="preserve">
     <value>Inventaire</value>
@@ -126,25 +132,25 @@
   <data name="MainPage_Title" xml:space="preserve">
     <value>Page Principale</value>
   </data>
+  <data name="Occupation_Label" xml:space="preserve">
+    <value>Taux d'occupation</value>
+  </data>
+  <data name="Recette_Label" xml:space="preserve">
+    <value>Recette</value>
+  </data>
   <data name="Settings_Title" xml:space="preserve">
     <value>Paramétres</value>
   </data>
   <data name="Statistics_Title" xml:space="preserve">
     <value>Statistiques</value>
   </data>
-  <data name="String4" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String5" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String6" xml:space="preserve">
-    <value />
-  </data>
-  <data name="String7" xml:space="preserve">
-    <value />
+  <data name="Stock_Label" xml:space="preserve">
+    <value>Stock du jour</value>
   </data>
   <data name="Welcome_message" xml:space="preserve">
     <value>Bienvenue sur Okira</value>
+  </data>
+  <data name="Yesterday_Stock_Label" xml:space="preserve">
+    <value>Stock de la veille</value>
   </data>
 </root>

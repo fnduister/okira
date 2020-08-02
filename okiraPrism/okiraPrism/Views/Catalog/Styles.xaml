@@ -2,7 +2,7 @@
 <ResourceDictionary
     x:Class="okiraPrism.Views.Catalog.Styles"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
     xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
     xmlns:control="clr-namespace:okiraPrism.Controls"
@@ -51,11 +51,30 @@
         <Setter Property="WidthRequest" Value="40" />
     </Style>
 
-    <!--  Common style for labels  -->
-    <Style x:Key="LabelStyle" TargetType="Label">
-        <Setter Property="TextColor" Value="{DynamicResource Gray-700}" />
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-Black}" />
         <Setter Property="FontFamily" Value="Montserrat-Regular" />
         <Setter Property="FontSize" Value="14" />
+    </Style>
+
+    <!--  Common style for labels  -->
+    <Style x:Key="LabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-Black}" />
+        <Setter Property="FontFamily" Value="Montserrat-Regular" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="LineHeight" Value="{OnPlatform Android=1.5, Default=-1}" />
+        <Setter Property="HorizontalTextAlignment" Value="Start" />
+        <Setter Property="VerticalTextAlignment" Value="Center" />
+        <Setter Property="VerticalOptions" Value="Center" />
+        <Setter Property="HorizontalOptions" Value="Start" />
+    </Style>
+
+    <!--  Common style for labels  -->
+    <Style x:Key="TitleLabelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-Black}" />
+        <Setter Property="FontFamily" Value="Montserrat-Regular" />
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="FontSize" Value="22" />
         <Setter Property="LineHeight" Value="{OnPlatform Android=1.5, Default=-1}" />
         <Setter Property="HorizontalTextAlignment" Value="Start" />
         <Setter Property="VerticalTextAlignment" Value="Center" />
@@ -200,7 +219,7 @@
         <Setter Property="FontFamily" Value="{StaticResource FontIcons}" />
     </Style>
 
-    <!-- Common style for borders -->
+    <!--  Common style for borders  -->
     <Style x:Key="SfBorderStyle" TargetType="border:SfBorder">
         <Setter Property="BackgroundColor" Value="{DynamicResource Gray-White}" />
         <Setter Property="BorderColor" Value="Transparent" />
@@ -208,7 +227,7 @@
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
     </Style>
 
-    <!-- Common style for search entries -->
+    <!--  Common style for search entries  -->
     <Style x:Key="SearchEntryStyle" TargetType="control:BorderlessEntry">
         <Setter Property="PlaceholderColor" Value="{DynamicResource Gray-700}" />
         <Setter Property="BackgroundColor" Value="Transparent" />
@@ -218,13 +237,13 @@
         <Setter Property="ReturnType" Value="Done" />
     </Style>
 
-    <!-- Common style for seperators -->
+    <!--  Common style for seperators  -->
     <Style x:Key="SeparatorStyle" TargetType="BoxView">
         <Setter Property="HeightRequest" Value="1" />
         <Setter Property="BackgroundColor" Value="{DynamicResource Gray-200}" />
     </Style>
 
-    <!-- Common style for navigation bar buttons -->
+    <!--  Common style for navigation bar buttons  -->
     <Style x:Key="NavigationBarButton" TargetType="buttons:SfButton">
         <Setter Property="TextColor" Value="{DynamicResource Gray-600}" />
         <Setter Property="FontSize" Value="18" />

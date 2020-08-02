@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Bar_name_Label" xml:space="preserve">
+    <value>Okira</value>
+  </data>
   <data name="Customer_Title" xml:space="preserve">
     <value>Customer</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Employees</value>
   </data>
   <data name="Inventory_Title" xml:space="preserve">
     <value>Inventory</value>
@@ -126,13 +132,25 @@
   <data name="MainPage_Title" xml:space="preserve">
     <value>Main Page</value>
   </data>
+  <data name="Occupation_Label" xml:space="preserve">
+    <value>Occupation rate</value>
+  </data>
+  <data name="Recette_Label" xml:space="preserve">
+    <value>Recette</value>
+  </data>
   <data name="Settings_Title" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="Statistics_Title" xml:space="preserve">
     <value>Statistics</value>
   </data>
+  <data name="Stock_Label" xml:space="preserve">
+    <value>Daily Stock</value>
+  </data>
   <data name="Welcome_message" xml:space="preserve">
     <value>Welcome to Okira</value>
+  </data>
+  <data name="Yesterday_Stock_Label" xml:space="preserve">
+    <value>Yesterday's Stock</value>
   </data>
 </root>

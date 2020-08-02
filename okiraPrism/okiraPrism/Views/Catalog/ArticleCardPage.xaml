@@ -81,26 +81,54 @@
                                                 <StackLayout
                                                     Grid.Row="0"
                                                     Margin="0"
+                                                    Padding="5"
                                                     Spacing="0"
                                                     VerticalOptions="CenterAndExpand">
 
-                                                    <Label Text="Hello" />
-                                                    <Label Text="Hello" />
+                                                    <Label
+                                                        FontAttributes="Bold"
+                                                        Style="{StaticResource TitleLabelStyle}"
+                                                        Text="{x:Static resources:AppResources.Bar_name_Label}"
+                                                        TextColor="Black" />
                                                     <FlexLayout
-                                                        Margin="5"
+                                                        Margin="5,2"
                                                         Direction="Row"
                                                         FlexLayout.Grow="1"
                                                         JustifyContent="SpaceBetween">
-                                                        <Label Text="second hello" />
-                                                        <Label Text="second hello" />
+                                                        <Label Text="{x:Static resources:AppResources.Recette_Label}" />
+                                                        <Label FontAttributes="Bold" Text="$250000" />
                                                     </FlexLayout>
                                                     <FlexLayout
-                                                        Margin="5"
+                                                        Margin="5,2"
                                                         Direction="Row"
                                                         FlexLayout.Grow="1"
                                                         JustifyContent="SpaceBetween">
-                                                        <Label Text="second hello" />
-                                                        <Label Text="second hello" />
+                                                        <Label Text="{x:Static resources:AppResources.Yesterday_Stock_Label}" />
+                                                        <Label FontAttributes="Bold" Text="$100000" />
+                                                    </FlexLayout>
+                                                    <FlexLayout
+                                                        Margin="5,2"
+                                                        Direction="Row"
+                                                        FlexLayout.Grow="1"
+                                                        JustifyContent="SpaceBetween">
+                                                        <Label Text="{x:Static resources:AppResources.Stock_Label}" />
+                                                        <Label FontAttributes="Bold" Text="$250000" />
+                                                    </FlexLayout>
+                                                    <FlexLayout
+                                                        Margin="5,2"
+                                                        Direction="Row"
+                                                        FlexLayout.Grow="1"
+                                                        JustifyContent="SpaceBetween">
+                                                        <Label Text="{x:Static resources:AppResources.Employee}" />
+                                                        <Label FontAttributes="Bold" Text="5" />
+                                                    </FlexLayout>
+                                                    <FlexLayout
+                                                        Margin="5,2,5,10"
+                                                        Direction="Row"
+                                                        FlexLayout.Grow="1"
+                                                        JustifyContent="SpaceBetween">
+                                                        <Label Text="{x:Static resources:AppResources.Occupation_Label}" />
+                                                        <Label FontAttributes="Bold" Text="85%" />
                                                     </FlexLayout>
 
 

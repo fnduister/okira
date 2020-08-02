@@ -61,11 +61,29 @@ namespace okiraPrism.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Okira.
+        /// </summary>
+        internal static string Bar_name_Label {
+            get {
+                return ResourceManager.GetString("Bar_name_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Customer.
         /// </summary>
         internal static string Customer_Title {
             get {
                 return ResourceManager.GetString("Customer_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Employees.
+        /// </summary>
+        internal static string Employee {
+            get {
+                return ResourceManager.GetString("Employee", resourceCulture);
             }
         }
         
@@ -88,6 +106,24 @@ namespace okiraPrism.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Occupation rate.
+        /// </summary>
+        internal static string Occupation_Label {
+            get {
+                return ResourceManager.GetString("Occupation_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recette.
+        /// </summary>
+        internal static string Recette_Label {
+            get {
+                return ResourceManager.GetString("Recette_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Settings.
         /// </summary>
         internal static string Settings_Title {
@@ -106,11 +142,29 @@ namespace okiraPrism.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Daily Stock.
+        /// </summary>
+        internal static string Stock_Label {
+            get {
+                return ResourceManager.GetString("Stock_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Welcome to Okira.
         /// </summary>
         internal static string Welcome_message {
             get {
                 return ResourceManager.GetString("Welcome_message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yesterday&apos;s Stock.
+        /// </summary>
+        internal static string Yesterday_Stock_Label {
+            get {
+                return ResourceManager.GetString("Yesterday_Stock_Label", resourceCulture);
             }
         }
     }

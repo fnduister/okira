@@ -27,6 +27,7 @@
     <Color x:Key="Gray-700">#606a7b</Color>
     <Color x:Key="Gray-800">#4a515e</Color>
     <Color x:Key="Gray-900">#333942</Color>
+    
     <Color x:Key="Gray-Black">#000000</Color>
     <Color x:Key="Gray-White">#ffffff</Color>
 

@@ -19,7 +19,7 @@ namespace okiraPrism.Views.Catalog
         {
             InitializeComponent();
 
-
+            
             NavigationPage.SetHasBackButton(this, false);
 
 
