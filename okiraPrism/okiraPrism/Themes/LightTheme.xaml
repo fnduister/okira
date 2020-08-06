@@ -27,7 +27,7 @@
     <Color x:Key="Gray-700">#606a7b</Color>
     <Color x:Key="Gray-800">#4a515e</Color>
     <Color x:Key="Gray-900">#333942</Color>
-    
+
     <Color x:Key="Gray-Black">#000000</Color>
     <Color x:Key="Gray-White">#ffffff</Color>
 
@@ -81,9 +81,23 @@
         </OnPlatform.Platforms>
     </OnPlatform>
 
+    <OnPlatform x:Key="Montserrat-Bold" x:TypeArguments="x:String">
+        <OnPlatform.Platforms>
+            <On Platform="Android" Value="Montserrat-Bold.ttf#Montserrat-Bold" />
+            <On Platform="iOS" Value="Montserrat-Bold" />
+            <On Platform="UWP" Value="Assets/Montserrat-Bold.ttf#Montserrat-Bold" />
+        </OnPlatform.Platforms>
+    </OnPlatform>
+
     <Style TargetType="NavigationPage">
         <Setter Property="BarBackgroundColor" Value="#272727" />
         <Setter Property="BarTextColor" Value="#FFFFFF" />
+    </Style>
+
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{DynamicResource Gray-Black}" />
+        <Setter Property="FontFamily" Value="Segoe" />
+        <Setter Property="FontSize" Value="14" />
     </Style>
 
 </ResourceDictionary>

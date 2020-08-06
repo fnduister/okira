@@ -125,6 +125,10 @@
     <AndroidAsset Include="Assets\Montserrat-Regular.ttf" />
     <AndroidAsset Include="Assets\Montserrat-SemiBold.ttf" />
     <AndroidAsset Include="Assets\MaterialDesignIcons.ttf" />
+    <AndroidAsset Include="Assets\Segoe UI Italic.ttf" />
+    <AndroidAsset Include="Assets\Segoe UI.ttf" />
+    <AndroidAsset Include="Assets\Segoe UI Bold Italic.ttf" />
+    <AndroidAsset Include="Assets\Segoe UI Bold.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>

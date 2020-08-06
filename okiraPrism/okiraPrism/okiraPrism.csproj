@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Segoe UI Bold Italic.ttf" />
+    <None Remove="Fonts\Segoe UI Bold.ttf" />
+    <None Remove="Fonts\Segoe UI Italic.ttf" />
+    <None Remove="Fonts\Segoe UI.ttf" />
     <None Remove="Images\background1.png" />
     <None Remove="Images\drawable-hdpi\3.-Interior-portrait-Stalybridge-Station-Buffet-by-Michael-Slaughter-LRPS.png" />
     <None Remove="Images\drawable-xhdpi\3.-Interior-portrait-Stalybridge-Station-Buffet-by-Michael-Slaughter-LRPS.png" />
@@ -12,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\Segoe UI Bold Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Segoe UI Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Segoe UI Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Segoe UI.ttf" />
     <EmbeddedResource Include="Images\background1.png" />
     <EmbeddedResource Include="Images\drawable-xhdpi\background1.png" />
   </ItemGroup>
@@ -67,10 +75,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Catalog\ArticleCardPage.xaml">
+    <EmbeddedResource Update="Views\ArticleCardPage\ArticleCardPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Catalog\Styles.xaml">
+    <EmbeddedResource Update="Views\ArticleCardPage\Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Page1.xaml">
@@ -87,7 +95,6 @@
   <ItemGroup>
     <Folder Include="Behaviors\" />
     <Folder Include="Effects\" />
-    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

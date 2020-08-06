@@ -10,7 +10,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using okiraPrism.ViewModels.Catalog;
-using okiraPrism.Views.Catalog;
+using okiraPrism.Views.ArticleCard;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace okiraPrism

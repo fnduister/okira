@@ -106,6 +106,15 @@ namespace okiraPrism.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add new Establishment.
+        /// </summary>
+        internal static string New_Establishment {
+            get {
+                return ResourceManager.GetString("New_Establishment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Occupation rate.
         /// </summary>
         internal static string Occupation_Label {
